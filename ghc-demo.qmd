@@ -1,0 +1,103 @@
+---
+title: "GHC Demo Assignment"
+subtitle: "CSC 110 - Fall 2025"
+author: "Lucy Dolan"
+date: "October 23, 2025"
+format:
+  html: 
+    toc: true
+    toc-depth: 1
+    theme: lux
+  pdf: 
+    toc: true
+    toc-depth: 1
+    fig-width: 8
+    fig-height: 5
+    geometry:
+      - top=20mm
+      - left=20mm
+      - right=20mm
+      - heightrounded
+---
+
+# Setup
+```{r}
+#| include = FALSE
+
+library(tidyverse)
+data(mpg)
+glimpse(mpg)
+```
+
+# Homework
+
+```{r}
+#| fig-cap: "Fuel mileage scatterplot"
+
+ggplot(
+  mpg, 
+  aes(
+    x = displ,
+    y = hwy
+  )
+) +
+  geom_point() +
+  labs(x = "Engine displacement", 
+       y = "Highway miles per gallon", 
+       title = "The impact of vehicle engine size on highway fuel mileage",
+       caption = "Fuel mileage scatterplot"
+  )
+```
+<https://www.davidson.edu>
+
+* Fall Semester 2025 Classes
+  + FRE201
+  + BIO116
+  + ENV202
+  
+* Favorite Movies
+  1. The Bear
+  2. New Girl
+  3. Abbott Elementary
+  
+* My sister's name is Reen[^1]
+
+[^1]: She is named after my great grandmother, Maureen.
+
+* Quadratic Formula
+$$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
+
+```{mermaid}
+flowchart LR
+  A[Wake up] --> B(Brush my teeth)
+  B --> C{Eat breakfast}
+  C --> D[Go to class]
+  C --> E[Go do homework]
+```
+
+> Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.
+
+::: {.callout-note collapse="true}
+NOTE
+:::
+
+::: {.callout-tip collapse="true"}
+TIP
+:::
+
+::: {.callout-important collapse="true"}
+CAUTION
+:::
+
+{{< pagebreak >}}
+
+# Reflection
+
+**Footnotes**
+I think that the footnotes function will be useful to note important information within our background research about our data. I think that it will also be useful to cite sources of information that is not text such as by a figure or graphic. 
+
+**Links**
+I think that links will be useful to show where our original data set is from. We could use a link to reference relevant information that we use to analyze our data visualizations. 
+
+**Callout notes** 
+I think that the callout notes would be useful to highlight important findings in our data. We could also use them to highlight limitations in the data or any future work that we could possibly do with the dataset. Additionally, we could use the callout notes to point out specifics about the dataset. 
